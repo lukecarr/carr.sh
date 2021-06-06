@@ -122,7 +122,7 @@ const Homepage = ({ repos }) => {
           <h2 className="text-6xl font-black">Luke Carr</h2>
           <div className="shields mt-4">
             {shields.map(function (shield, index) {
-              return <a key={shield.href} className={index > 0 ? 'ml-4' : ''} href={shield.href} target="_blank">
+              return <a key={shield.href} className={index > 0 ? 'ml-4' : ''} href={shield.href} target="_blank" rel="noopener noreferrer">
                 <Shield left={shield.left} right={shield.right} color={shield.color} />
               </a>
             })}
@@ -159,7 +159,7 @@ const Homepage = ({ repos }) => {
                   <h3 className="text-3xl font-bold mb-4">{certKey}</h3>
                   <div className="badges grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
                     {certifications[certKey].map(function (cert) {
-                      return <a key={cert.href} href={cert.href} className="w-full"><img className="w-full" src={cert.badge} alt={cert.name} /></a>
+                      return <a key={cert.href} href={cert.href} target="_blank" rel="noopener noreferrer" className="w-full"><img className="w-full" src={cert.badge} alt={cert.name} /></a>
                     })}
                   </div>
                 </div>
