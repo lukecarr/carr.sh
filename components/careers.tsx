@@ -7,6 +7,7 @@ type Props = {
     name: string
     period: string
     role?: string
+    description?: string
   }[]
 }
 
