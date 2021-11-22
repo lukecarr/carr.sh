@@ -1,0 +1,16 @@
+{
+  "careers": [
+    {
+      "name": "Ted Wragg Trust",
+      "period": "July 2020 - Present",
+      "role": "Digital Learning Engineer",
+      "description": "As a Digital Learning Engineer at the Ted Wragg Trust, I operate closely with teaching staff across the trust to design and develop empowering solutions for the classroom that embraces technology.<br><br>With a substantial focus on automation, my role strives to reduce the time spent by teachers manually uploading and creating content on learning management systems."
+    },
+    {
+      "name": "Ted Wragg Trust",
+      "period": "May 2020 - July 2020",
+      "role": "Contractor",
+      "description": "Starting in May 2020, I worked closely with the Ted Wragg Trust as a contractor to improve and enrich their e-learning solutions.<br><br>This contract work primarily consisted of designing and developing custom Moodle plugins to fulfil their digital learning needs."
+    }
+  ]
+}

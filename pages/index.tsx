@@ -8,93 +8,10 @@ import Shield from '../components/shield'
 import Career from '../components/career'
 import Repo from '../components/repo'
 
-const shields: {
-  left: string
-  right: string
-  href: string
-  color?: string
-}[] = [
-  {
-    left: 'github',
-    right: 'lukecarr',
-    href: 'https://github.com/lukecarr',
-  },
-  {
-    left: 'twitter',
-    right: '@imlukecarr',
-    color: '00aced',
-    href: 'https://twitter.com/imlukecarr',
-  },
-  {
-    left: 'find me on',
-    right: 'linkedin',
-    color: '0072b1',
-    href: 'https://linkedin.com/in/luke-j-carr',
-  },
-]
-
-const education: {
-  name: string
-  period: string
-  description: string
-}[] = [
-  {
-    name: 'Exeter College',
-    period: 'September 2017 - July 2019',
-    description: `I obtained A-Levels in Computer Science, Mathematics, and Further Mathematics during my 2 years at Exeter
-College.<br><br>Here, a friend introduced me to the joys of modern JavaScript (specifically Node.js and ES6), and swayed me
-away from the dark sides of Java and PHP! &nbsp; <em>P.S. I still ❤️ them both.</em>`,
-  },
-]
-
-const careers: {
-  name: string
-  period: string
-  role: string
-  description: string
-}[] = [
-  {
-    name: 'Ted Wragg Trust',
-    period: 'July 2020 - Present',
-    role: 'Digital Learning Engineer',
-    description: `As a Digital Learning Engineer at the Ted Wragg Trust, I operate closely with teaching staff across
-the trust to design and develop empowering solutions for the classroom that embraces technology.<br><br>With a substantial
-focus on automation, my role strives to reduce the time spent by teachers manually uploading and creating content on
-learning management systems.`,
-  },
-  {
-    name: 'Ted Wragg Trust',
-    period: 'May 2020 - July 2020',
-    role: 'Contractor',
-    description: `Starting in May 2020, I worked closely with the Ted Wragg Trust as a contractor to improve and enrich their
-e-learning solutions.<br><br>This contract work primarily consisted of designing and developing custom Moodle plugins to
-fulfil their digital learning needs.`,
-  },
-  {
-    name: 'Omnio Interactive',
-    period: 'November 2019 - August 2020',
-    role: 'Chief Executive Officer',
-    description: `In late 2019, I formed a tech startup named Omnio Interactive with a close friend, where we worked on
-a cloud-based learning platform called Omnio Cloud.<br><br>In August 2020, I left Omnio Interactive to pursue a role at
-the Ted Wragg Trust.`,
-  },
-]
-
-const certifications: {
-  [key: string]: {
-    name: string
-    href: string
-    badge: string
-  }[]
-} = {
-  'Amazon Web Services': [
-    {
-      name: 'AWS Certified Cloud Practitioner',
-      href: 'https://www.credly.com/badges/eef0f0e9-f56d-4cdb-af91-1d90e7f15884',
-      badge: 'https://images.credly.com/size/340x340/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png',
-    },
-  ],
-}
+import { shields } from '../data/shields.json'
+import { education } from '../data/education.json'
+import { careers } from '../data/careers.json'
+import { certifications } from '../data/certifications.json'
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const github = new Octokit()
@@ -153,12 +70,12 @@ const Homepage = ({ repos }) => {
         <div className="container pt-12 pb-24">
           <h2 id="certifications" className="text-5xl font-black">Certifications</h2>
           <div className="certifications mt-4">
-            {Object.keys(certifications).map(function (certKey) {
+            {certifications.map(function (certKey) {
               return (
-                <div key={certKey} className="certification-group py-6 border-b-2">
-                  <h3 className="text-3xl font-bold mb-4">{certKey}</h3>
+                <div key={certKey.name} className="certification-group py-6 border-b-2">
+                  <h3 className="text-3xl font-bold mb-4">{certKey.name}</h3>
                   <div className="badges grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
-                    {certifications[certKey].map(function (cert) {
+                    {certKey.certs.map(function (cert) {
                       return <a key={cert.href} href={cert.href} target="_blank" rel="noopener noreferrer" className="w-full"><img className="w-full" src={cert.badge} alt={cert.name} /></a>
                     })}
                   </div>
