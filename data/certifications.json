@@ -1,14 +1,12 @@
-{
-  "certifications": [
-    {
-      "name": "Amazon Web Services",
-      "certs": [
-        {
-          "name": "AWS Certified Cloud Practitioner",
-          "href": "https://www.credly.com/badges/eef0f0e9-f56d-4cdb-af91-1d90e7f15884",
-          "badge": "https://images.credly.com/size/340x340/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Amazon Web Services",
+    "certs": [
+      {
+        "name": "AWS Certified Cloud Practitioner",
+        "href": "https://www.credly.com/badges/eef0f0e9-f56d-4cdb-af91-1d90e7f15884",
+        "badge": "https://images.credly.com/size/340x340/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png"
+      }
+    ]
+  }
+]

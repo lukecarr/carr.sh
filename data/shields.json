@@ -1,21 +1,19 @@
-{
-  "shields": [
-    {
-      "left": "github",
-      "right": "lukecarr",
-      "href": "https://github.com/lukecarr"
-    },
-    {
-      "left": "twitter",
-      "right": "@imlukecarr",
-      "color": "00aced",
-      "href": "https://twitter.com/imlukecarr"
-    },
-    {
-      "left": "find me on",
-      "right": "linkedin",
-      "color": "0072b1",
-      "href": "https://linkedin.com/in/luke-j-carr"
-    }
-  ]
-}
+[
+  {
+    "left": "github",
+    "right": "lukecarr",
+    "href": "https://github.com/lukecarr"
+  },
+  {
+    "left": "twitter",
+    "right": "@imlukecarr",
+    "color": "00aced",
+    "href": "https://twitter.com/imlukecarr"
+  },
+  {
+    "left": "find me on",
+    "right": "linkedin",
+    "color": "0072b1",
+    "href": "https://linkedin.com/in/luke-j-carr"
+  }
+]
