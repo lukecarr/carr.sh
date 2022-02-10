@@ -23,6 +23,7 @@ const Certifications: FunctionComponent<Props> = ({ certifications }) => {
                 <h3 className="text-3xl font-bold mb-4">{certKey.name}</h3>
                 <div className="badges grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6">
                   {certKey.certs.map(function (cert) {
+                    // eslint-disable-next-line @next/next/no-img-element
                     return <a key={cert.href} href={cert.href} target="_blank" rel="noopener noreferrer" className="w-full"><img className="w-full" src={cert.badge} alt={cert.name} /></a>
                   })}
                 </div>
