@@ -24,8 +24,8 @@ const Hero: FunctionComponent<Props> = ({ shields, age }) => {
           I spend most of my time inside Node.js and I love writing code &#128187; that&apos;s not just functional but beautiful &#10024; as well.
         </p>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
-          <img className="w-full max-w-md mx-auto md:mb-0 md:mr-6" src="https://github-readme-stats.vercel.app/api?username=lukecarr&show_icons=true" alt="GitHub Stats" />
-          <img className="w-full max-w-md mx-auto md:w-auto md:h-full" src="https://github-readme-stats.vercel.app/api/top-langs?username=lukecarr&layout=compact" alt="Most Used Languages" />
+          <img className="w-full max-w-md mx-auto md:mb-0 md:mr-6" src="https://https://gh-stats-jarrl.vercel.app/api?show_icons=true" alt="GitHub Stats" />
+          <img className="w-full max-w-md mx-auto md:w-auto md:h-full" src="https://gh-stats-jarrl.vercel.app/api/top-langs?layout=compact" alt="Most Used Languages" />
         </div>
       </div>
     </section>
