@@ -10,7 +10,7 @@ const Hero: FunctionComponent<Props> = ({ age }) => {
   return (
     <section>
       <div className="container pt-12 pb-24">
-        <h2 className="text-6xl font-black">Luke Carr</h2>
+        <h2 className="text-6xl font-black text-center md:text-left">Luke Carr</h2>
         <Shields />
         <p id="bio" className="text-xl font-semibold my-8 py-1 pl-6 border-l-4">
           I&apos;m a {age} y/o developer working on various open source projects relating to education &#127979; and privacy &#128064;.
