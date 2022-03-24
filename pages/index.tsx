@@ -8,9 +8,6 @@ import Careers from '../components/careers'
 import Certifications from '../components/certifications'
 import Education from '../components/education'
 
-import shields from '../data/shields.json'
-import education from '../data/education.json'
-import careers from '../data/careers.json'
 import certifications from '../data/certifications.json'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
@@ -18,26 +15,15 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json())
 const Homepage = () => {
   const { data, error } = useSWR('/api/repos', fetcher)
 
-  if (error) {
-    return (
-      <Layout>
-        <Head>
-          <title>Error</title>
-        </Head>
-        <p>Failed to fetch repositories!</p>
-      </Layout>
-    )
-  }
-
   return (
     <Layout>
       <Head>
         <title>Luke Carr</title>
       </Head>
-      <Hero shields={shields} age={Math.abs(new Date(Date.now() - new Date('2001-07-30').getTime()).getUTCFullYear() - 1970)} />
-      <Careers careers={careers} />
+      <Hero age={Math.abs(new Date(Date.now() - new Date('2001-07-30').getTime()).getUTCFullYear() - 1970)} />
+      <Careers />
       <Certifications certifications={certifications} />
-      <Education education={education} />
+      <Education />
       <Repos repos={data?.repos ?? []} />
     </Layout>
   )

@@ -2,7 +2,9 @@ import { Octokit } from '@octokit/rest'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const getRepos = async () => {
-  const github = new Octokit()
+  const github = new Octokit({
+    auth: process.env.GITHUB_AUTH_TOKEN,
+  })
   const { data } = await github.repos.listForUser({
     username: 'lukecarr',
     sort: 'pushed',

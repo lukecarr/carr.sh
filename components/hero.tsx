@@ -3,21 +3,15 @@ import { FunctionComponent } from 'react'
 import Shields from './shields'
 
 type Props = {
-  shields: {
-    left: string
-    right: string
-    href: string
-    color?: string
-  }[]
   age: number
 }
 
-const Hero: FunctionComponent<Props> = ({ shields, age }) => {
+const Hero: FunctionComponent<Props> = ({ age }) => {
   return (
     <section>
       <div className="container pt-12 pb-24">
         <h2 className="text-6xl font-black">Luke Carr</h2>
-        <Shields shields={shields} />
+        <Shields />
         <p id="bio" className="text-xl font-semibold my-8 py-1 pl-6 border-l-4">
           I&apos;m a {age} y/o developer working on various open source projects relating to education &#127979; and privacy &#128064;.
           <br /><br />
