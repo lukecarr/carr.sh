@@ -13,6 +13,7 @@ specifiers:
   next: 12.1.0
   postcss: ^8.3.0
   react: 17.0.2
+  react-content-loader: 6.2.0
   react-dom: 17.0.2
   swr: 1.2.2
   tailwindcss: ^3.0.19
@@ -25,6 +26,7 @@ dependencies:
   dayjs: 1.11.0
   next: 12.1.0_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
+  react-content-loader: 6.2.0_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   swr: 1.2.2_react@17.0.2
 
@@ -1997,6 +1999,15 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
     dev: true
+
+  /react-content-loader/6.2.0_react@17.0.2:
+    resolution: {integrity: sha512-r1dI6S+uHNLW68qraLE2njJYOuy6976PpCExuCZUcABWbfnF3FMcmuESRI8L4Bj45wnZ7n8g71hkPLzbma7/Cw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16.0.0'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
