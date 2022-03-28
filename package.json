@@ -1,34 +1,21 @@
 {
   "name": "carr.sh",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "eslintConfig": {
-    "extends": "next/core-web-vitals"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "15.11.1",
-    "@octokit/rest": "18.12.0",
-    "contentful": "9.1.18",
-    "dayjs": "1.11.0",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-content-loader": "6.2.0",
-    "react-dom": "17.0.2",
-    "swr": "1.2.2"
+    "@n8tb1t/use-scroll-position": "^2.0.3",
+    "preact": "^10.5.15"
   },
   "devDependencies": {
-    "@types/node": "^17.0.17",
-    "@types/react": "^17.0.9",
-    "autoprefixer": "^10.2.6",
-    "eslint": "^8.8.0",
-    "eslint-config-next": "^12.1.0",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^3.0.19",
-    "typescript": "^4.3.2"
+    "@preact/preset-vite": "^2.1.5",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vite-plugin-windicss": "^1.8.3",
+    "windicss": "^3.5.1"
   }
 }
