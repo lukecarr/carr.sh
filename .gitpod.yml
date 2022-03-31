@@ -1,3 +1,7 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
-  - init: npm i -g pnpm && pnpm install
+  - before: volta install node@16.14.2 pnpm@6.32.3
+    init: pnpm install
     command: pnpm dev
